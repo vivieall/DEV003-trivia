@@ -3,11 +3,108 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trivia</title>
+    <title>Superheroine Trivia</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+          <label id="head" class="title">¡Bienvenidx a la Trivia de Superheroínas!</label>
+          <div id="welcome" class="container">
+            <span class="label">Escribe tu nombre y comienza a la trivia</span>
+            <input id="username" class="username-input" placeholder="Nombre o alias" />
+            <button class="button start" onclick="startGame()">Empezar el juego</button>
+          </div>
+        </div>
+        <div id="choose">
+          <section class="container">
+            <label class="label">Elige la temática de tu preferencia: </label>
+            <button class="button dc" onclick="startDC()">DC</button>
+            <button class="button marvel" onclick="startMarvel()">Marvel</button>
+          </section>
+        </div>
+
+        <!-- START DC PANEL QUESTIONS -->
+        <div id="panelDC-q1">
+          <section id="p1" class="container">
+            <label class="label alternative">¿Quién usa el alias de 'Diana Prince'? </label>
+            <div class="wrap">
+              <label class="label alternative"><input type="radio" name="q1" value="0"/>SuperGirl</label>
+              <label class="label alternative"><input type="radio" name="q1" value="1"/>WonderWoman</label>
+              <label class="label alternative"><input type="radio" name="q1" value="0"/>CatWoman</label>
+            </div>
+            <p class="score-label"></p>
+            <button class="button next" onclick="checkAnswer('p1')">Siguiente pregunta</button>
+          </section>
+        </div>
+        <div id="panelDC-q2">
+          <section id="p2"class="container">
+              <label class="label alternative">¿Cuál es el nombre de 'SuperGirl'? </label>
+              <div class="wrap">
+                <label class="label alternative"><input type="radio" name="q2" value="1"/>Kara Danvers</label>
+                <label class="label alternative"><input type="radio" name="q2" value="0"/>Dana Danvers</label>
+                <label class="label alternative"><input type="radio" name="q2" value="0"/>Lara Danvers</label>
+              </div>
+              <p class="score-label"></p>
+              <button class="button next" onclick="checkAnswer('p2')">Siguiente pregunta</button>
+          </section>
+        </div>
+        <div id="panelDC-q3">
+          <section id="p3" class="container">
+            <label class="label alternative">¿En qué es experta CatWoman? </label>
+            <div class="wrap">
+              <label class="label alternative"><input type="radio" name="q3" value="0"/>Asesinatos</label>
+              <label class="label alternative"><input type="radio" name="q3" value="0"/>Hacking</label>
+              <label class="label alternative"><input type="radio" name="q3" value="1"/>Robos</label>
+            </div>
+            <p class="score-label"></p>
+            <label id="score" class="score-label total"></label>
+            <button class="button next final" onclick="checkAnswer('p3',true)">Obtener Score</button>
+            <button id="return" class="button next home" onclick="window.location.reload()">Volver al inicio</button>
+          </section>
+        </div>
+      <!-- END DC PANEL QUESTIONS -->
+
+      <!-- START MARVEL PANEL QUESTIONS -->
+        <div id="panelMarvel-q1">
+          <section id="p4" class="container">
+            <label class="label alternative">¿Cómo se llama la hija de AntMan?</label>
+            <div class="wrap">
+              <label class="label alternative"><input type="radio" name="q1" value="0"/>Lassie Lang</label>
+              <label class="label alternative"><input type="radio" name="q1" value="1"/>Cassie Lang</label>
+              <label class="label alternative"><input type="radio" name="q1" value="0"/>Yassie Lang</label>
+            </div>
+            <p class="score-label"></p>
+            <button class="button next" onclick="checkAnswer('p4')">Siguiente pregunta</button>
+          </section>
+        </div>
+        <div id="panelMarvel-q2">
+          <section id="p5" class="container">
+            <label class="label alternative">¿Quién es la hermana adoptiva de Jessica Jones? </label>
+            <div class="wrap">
+              <label class="label alternative"><input type="radio" name="q2" value="1"/>Trish Walker</label>
+              <label class="label alternative"><input type="radio" name="q2" value="0"/>Alisa Jones</label>
+              <label class="label alternative"><input type="radio" name="q2" value="0"/>Dorothy Walker</label>
+            </div>
+            <p class="score-label"></p>
+            <button class="button next" onclick="checkAnswer('p5')">Siguiente pregunta</button>
+          </section>
+        </div>
+        <div id="panelMarvel-q3">
+          <section id="p6" class="container">
+            <label class="label alternative">¿Donde nació Wanda Maximoff?</label>
+            <div class="wrap">
+              <label class="label alternative"><input type="radio" name="q3" value="0"/>Yugoslavia</label>
+              <label class="label alternative"><input type="radio" name="q3" value="1"/>Sokovia</label>
+              <label class="label alternative"><input type="radio" name="q3" value="0"/>Bulgaria</label>
+            </div>
+            <p class="score-label"></p>
+            <label id="score" class="score-label total"></label>
+            <button class="button next final" onclick="checkAnswer('p6',true)">Obtener Score</button>
+            <button id="home" class="button next home" onclick="window.location.reload()">Volver al inicio</button>
+          </section>
+        </div>
+        <!-- END MARVEL PANEL QUESTIONS -->
+    </div>
     <script src="main.js"></script>
   </body>
 </html>

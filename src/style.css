@@ -1,3 +1,102 @@
 /*
   Aquí van los estilos
 */
+
+body {
+  background: rgb(0, 0, 0);
+  background-image: url("https://i.ibb.co/4sM9FpB/output-onlinepngtools-1.png");
+}
+
+#root {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  display: grid;
+  justify-content: center;
+  border-radius: 2rem;
+  border-color: antiquewhite;
+  padding: 1rem;
+}
+
+.container{
+  display: grid;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
+  border-radius: 2rem;
+  border-color: antiquewhite;
+}
+
+.title{
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+
+.label{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: white;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.button{
+  border-radius: 0.5rem;
+  font-weight: bold;
+  color:rgb(0, 0, 0);
+  border-color: rgb(255, 255, 255);
+  height: 3rem;
+  width: 12rem;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+}
+
+.button.start{
+  background-color: rgb(34, 151, 34);
+}
+
+.button.next{
+  background-color: rgb(99 163 211);
+  margin-top: 0rem;
+}
+
+.username-input {
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  color:rgb(0, 0, 0);
+  border-color: rgb(255, 255, 255);
+  height: 2rem;
+  width: 12rem;
+  font-size: 1rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+input {
+  font-size: 1rem;
+  color: white;
+  height: 1rem;
+  font-size: 1rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.label.alternative{
+  margin: 1.5rem;
+}
+
+.score-label{
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  color: white;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.score-label .total{
+  margin-top: 0rem;
+}
+
+.wrap{
+  display:grid;
+}
